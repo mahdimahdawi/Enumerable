@@ -11,4 +11,13 @@ module MyEnumerable
     end
     false
   end
+
+  def filter 
+    lists=[]
+    each do |n|
+      lists << n if yield n     
+    end
+    lists
+  end
+
 end
